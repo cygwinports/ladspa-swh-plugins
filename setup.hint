@@ -1,0 +1,4 @@
+category: Audio
+requires: cygwin libfftw3_3 libintl8 ladspa-sdk
+sdesc: "Large collection of LADSPA plugins"
+ldesc: "Large collection of LADSPA plugins"

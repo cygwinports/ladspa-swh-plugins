@@ -1,0 +1,20 @@
+--- origsrc/swh-plugins-0.4.15/configure.in	2006-08-08 10:47:16.000000000 -0500
++++ src/swh-plugins-0.4.15/configure.in	2008-10-10 15:15:57.111035700 -0500
+@@ -104,7 +104,7 @@
+   if test ${build_cpu} = "powerpc64"; then MACHINE=""; fi
+   if test ${build_cpu} = "x86_64"; then MACHINE=""; fi
+ 
+-  CFLAGS="$CFLAGS -Wall -O3 -fomit-frame-pointer -fstrength-reduce -funroll-loops -ffast-math -fPIC -DPIC ${MACHINE} ${USE_SSE} ${DARWIN_CFLAGS}"
++  CFLAGS="$CFLAGS -Wall -O3 -fomit-frame-pointer -fstrength-reduce -funroll-loops -ffast-math -DPIC ${MACHINE} ${USE_SSE} ${DARWIN_CFLAGS}"
+ 
+   dnl For Intel's C compiler use:
+   dnl CC="icc"
+@@ -121,7 +121,7 @@
+ if test "x${prefix}" = xNONE; then
+   AC_DEFINE_UNQUOTED(PACKAGE_LOCALE_DIR, "${ac_default_prefix}/${DATADIRNAME}/locale")
+ else
+-  AC_DEFINE_UNQUOTED(PACKAGE_LOCALE_DIR, "${prefix}/${DATADIRNAME}/locale")
++  AC_DEFINE_UNQUOTED(PACKAGE_LOCALE_DIR, "${prefix}/share/locale")
+ fi
+ 
+ dnl Set PACKAGE_DATA_DIR in config.h.
