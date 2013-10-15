@@ -1,0 +1,15 @@
+NAME="ladspa-swh-plugins"
+VERSION=0.4.15
+RELEASE=10
+CATEGORY="Audio"
+SUMMARY="Large collection of LADSPA plugins"
+DESCRIPTION="Large collection of LADSPA plugins"
+HOMEPAGE="http://plugin.org.uk/"
+SRC_URI="http://plugin.org.uk/releases/${VERSION}/swh-plugins-${VERSION}.tar.gz"
+SRC_DIR="swh-plugins-${VERSION}"
+PATCH_URI="
+	0.4.15-configure.patch
+	0.4.15-libtool.patch
+"
+
+DISTCLEANFILES="ladspa.h"
